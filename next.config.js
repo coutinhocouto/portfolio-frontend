@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 
+const withPurgeCss = require('next-purgecss')
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -13,4 +15,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = withPurgeCss(nextConfig)

@@ -44,18 +44,18 @@ export default function Header() {
         name="description"
         content={`Sou programador sênior fullstack com ${year} anos de experiência, tendo participado e/ou liderado mais de 300 projetos web ao longo desses anos.`}
       />
-      <link rel="icon" href="favicon.ico" />
+      <link rel="icon" href="/favicon.jpg" />
       <meta
         property="og:image"
-        content="opengraph.webp"
+        content="/opengraph.webp"
       />
       <meta
         property="og:image:url"
-        content="opengraph.webp"
+        content="/opengraph.webp"
       />
       <meta
         name="twitter:image"
-        content="opengraph.webp"
+        content="/opengraph.webp"
       />
     </Head>
   );

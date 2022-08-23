@@ -44,7 +44,7 @@ export default function Header() {
         name="description"
         content={`Sou programador sênior fullstack com ${year} anos de experiência, tendo participado e/ou liderado mais de 300 projetos web ao longo desses anos.`}
       />
-      <link rel="icon" href="/favicon.webp" />
+      <link rel="icon" href="/favicon.ico" />
       <meta
         property="og:image"
         content="/opengraph.webp"

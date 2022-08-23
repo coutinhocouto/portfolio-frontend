@@ -18,7 +18,7 @@ export default function Banner() {
         <BannerTitle>
           {
             {
-              pt_BR: "Faça da sua vida mais Responsivis",
+              pt_BR: "Faça da sua vida mais Responsiva",
               en: "Make your life more Responsive",
               es_ES: "Haz que tu vida sea más Receptiva",
             }[lang.lang]

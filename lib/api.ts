@@ -7,7 +7,7 @@ function fetcher(url: string) {
 
 export function getPosts() {
   const { data, error } = useSWR(
-    `https://coutz.com.br/backend/wp-json/wp/v2/posts?per_page=50`,
+    `https://backend.coutz.com.br/wp-json/wp/v2/posts?per_page=50`,
     fetcher
   );
 
@@ -20,7 +20,7 @@ export function getPosts() {
 
 export function getPrint(id: number) {
   const { data, error } = useSWR(
-    `https://coutz.com.br/backend/wp-json/wp/v2/media?parent=${id}`,
+    `https://backend.coutz.com.br/wp-json/wp/v2/media?parent=${id}`,
     fetcher
   );
 

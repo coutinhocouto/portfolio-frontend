@@ -1,27 +1,27 @@
 on: push
-name: 🚀 Deploy website on push
+name: 🚀 Deploy website
 jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
+    - name: ✊ Pega arquivos atualizados
       uses: actions/checkout@v2
 
-    - name: Use Node.js 14
+    - name: 💣 Usando o node.js
       uses: actions/setup-node@v2
       with:
         node-version: '14'
       
-    - name: 🔨 Build Project
+    - name: 🔨 Buildando o projeto
       run: |
         npm install
         npm run build
     
-    - name: List output files
+    - name: 📃 Lista os arquivos buildados
       run: find build/ -print
       
-    - name: 📂 Sync files
+    - name: 📂 Sincronizando arquivos
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
         server: ${{ secrets.FTP_HOST }}

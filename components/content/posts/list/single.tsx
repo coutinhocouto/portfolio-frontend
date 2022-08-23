@@ -1,10 +1,11 @@
 import { Button, Col, Modal } from "react-bootstrap";
 import Image from "next/image";
 
-import { ModalPost, PostTitle } from "./styles";
+import { ModalPost, PostTitle, SinglePost, SinglePostZoom } from "./styles";
 import { getPrint } from "@/lib/api";
 import { useContext, useState } from "react";
 import LangContext from "@/lib/context";
+import { SearchOutlined } from "@ant-design/icons";
 
 export interface SingleProps {
   id: number;
@@ -15,7 +16,14 @@ export interface SingleProps {
   desc_es: string;
 }
 
-export default function Single({ id, title, link, desc, desc_en, desc_es }: SingleProps) {
+export default function Single({
+  id,
+  title,
+  link,
+  desc,
+  desc_en,
+  desc_es,
+}: SingleProps) {
   const { printImg, isLoadingPrint } = getPrint(id);
   const [show, setShow] = useState(false);
 
@@ -58,15 +66,18 @@ export default function Single({ id, title, link, desc, desc_en, desc_es }: Sing
               </Button>
             </Modal.Footer>
           </ModalPost>
-          <span onClick={handleShow}>
+          <SinglePost onClick={handleShow}>
             <Image
               src={printImg[0].media_details.sizes.medium.source_url}
               alt={title}
               width={450}
               height={250}
             />
+            <SinglePostZoom>
+              <SearchOutlined />
+            </SinglePostZoom>
             <PostTitle className="mt-1">{title}</PostTitle>
-          </span>
+          </SinglePost>
         </Col>
       ) : (
         <Image src="/loader.gif" alt="Coutz Loader" height={200} width={200} />

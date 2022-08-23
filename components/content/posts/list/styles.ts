@@ -30,3 +30,27 @@ export const ModalPost = styled(Modal)`
     border-top: 1px solid #ffc107;
   }
 `;
+
+export const SinglePost = styled.span`
+  cursor: pointer;
+  position: relative;
+  display: block;
+  img {
+    transition: all 300ms ease;
+  }
+  &:hover img {
+    filter: grayscale(1);
+  }
+`;
+
+export const SinglePostZoom = styled.span`
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  padding: 4px 10px 10px;
+  background: #191923;
+  margin-left: -18px;
+  opacity: 0.85;
+  border-radius: 50%;
+`;
